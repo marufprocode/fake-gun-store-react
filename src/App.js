@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import './App.css';
+import AllGun from './components/allGun/AllGun';
+import Navbar from './components/navbar/navbar';
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline bg-slate-600">
-      Hello world!
-      </h1>
+      <Navbar count={count}/>
+      <AllGun count={count} setCount={setCount}/>
     </div>
   );
 }
